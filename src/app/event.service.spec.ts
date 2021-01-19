@@ -13,4 +13,10 @@ describe('EventService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should update an event', () => {
+    spyOn(service, 'updateEvent').and.returnValue(true);
+    service.updateEvent('test', 'test', 'test');
+    expect(service.updateEvent).toHaveBeenCalled();
+  });
 });

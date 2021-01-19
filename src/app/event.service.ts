@@ -18,6 +18,8 @@ export class EventService {
     const params ={
       event, spiiConstraint, updater,
     }
+
+    console.log('params', params);
     return true;
   }
 
