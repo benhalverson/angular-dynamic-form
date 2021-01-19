@@ -10,6 +10,8 @@ $header2: 24px;
 $grey900: #202124;
 $grey800: #3c4043;
 $grey700: #5f6368;
+$grey600: #80868b;
+$google-blue: #4285f4;
 
 .marketing-header,
 .form-flex,
@@ -76,7 +78,7 @@ mat-icon {
 }
 
 .tooltip-icon {
-  color: #80868b;
+  color: $grey600;
   font-size: $small-text1;
   margin: 5px 0 0 5px;
 }
@@ -104,11 +106,6 @@ mat-button-toggle {
 button {
   float: right;
   margin-left: 12px;
-}
-
-.mat-chip.mat-standard-chip {
-  background-color: #e8f0fe;
-  color: $grey800;
 }
 
 .form-field ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
@@ -186,13 +183,13 @@ mat-label {
 }
 
 .primary-buttons {
-  background-color: #4285f4;
+  background-color: $google-blue;
   color: #fff;
   font-family: $font-family;
 }
 
 .cancel-button {
-  color: #4285f4;
+  color: $google-blue;
   font-family: $font-family;
 }
 
