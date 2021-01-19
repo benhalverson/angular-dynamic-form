@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { EventService } from 'src/app/event.service';
 import { EnumList } from '../../enum-list';
 
 @Component({
@@ -10,7 +11,7 @@ import { EnumList } from '../../enum-list';
 })
 export class MarketingComponent implements OnInit {
 
-  constructor(private readonly fb: FormBuilder, private readonly snackbar: MatSnackBar,) { }
+  constructor(private readonly fb: FormBuilder, private readonly snackbar: MatSnackBar, private readonly eventService: EventService,) { }
   toggleChecker = false;
   priority = '';
   code = '';
@@ -190,9 +191,89 @@ export class MarketingComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    this.eventService.updateEvent('test', 'test', 'test');
   }
+
+  validate() {
+    console.log('priority', this.marketingForm.value['priority']);
+    this.eventFormatEmpty = !this.marketingForm.controls['eventFormat'].valid;
+    this.eventMainFundingEmpty =
+      !this.marketingForm.controls['fundingTeam'].valid;
+    this.eventCustomerSegmentEmpty =
+      !this.marketingForm.controls['customerSegment'].valid;
+    this.eventRevenueOpportunityEmpty =
+      !this.marketingForm.controls['revenueOpportunity'].valid;
+    this.eventTargetAuienceEmpty =
+      !this.marketingForm.controls['targetAudience'].valid;
+    this.eventEstimatedAttendeesEmpty =
+      !this.marketingForm.controls['attendees'].valid;
+    this.eventFocusEmpty = !this.marketingForm.controls['productFocus'].valid;
+    this.eventCustomerVertical =
+      !this.marketingForm.controls['customerVertical'].valid;
+    this.eventMarketingObjectiveEmpty =
+      !this.marketingForm.controls['marketingObjective'].valid;
+
+  }
+
+  updateForm() {
+    const marketingFieldRequest = {
+      code: '',
+      owner: '',
+      name: '',
+      format: '',
+      customerSegment: '',
+      financialsInfo: {
+        fundingTeam: '',
+        revenueOpportunity: '',
+        amountEstimated: 0,
+
+      },
+      marketingInfo: {
+        targetAudience: '',
+        googleBrandedEvent: false,
+        customerVertical: '',
+        priorityExecutive: false,
+        estimateNumberOfAttendees: 0,
+      },
+      reportingInfo: {
+        externalEventWebsite: '',
+
+      }
+    }; // new api.marketingRequest;
+    const workflowStage = 'MARKETING_INFO_ADDED';
+    this.amountEstimated = this.marketingForm.value['amountEstimated'];
+
+    marketingFieldRequest.code = this.code;
+    marketingFieldRequest.owner = this.owner;
+    marketingFieldRequest.name = this.name;
+    marketingFieldRequest.format = this.marketingForm.value['eventFormat'];
+    marketingFieldRequest.customerSegment = this.marketingForm.value['customerSegment'];
+    marketingFieldRequest.financialsInfo.fundingTeam = this.marketingForm.value['fundingTeam'];
+    marketingFieldRequest.financialsInfo.revenueOpportunity =
+      this.marketingForm.value['revenueOpportunity'];
+    marketingFieldRequest.marketingInfo.targetAudience =
+      this.marketingForm.value['targetAudience'];
+    marketingFieldRequest.marketingInfo.googleBrandedEvent =
+      this.marketingForm.value['googleBranded'] === 'yes';
+    marketingFieldRequest.marketingInfo.customerVertical =
+      this.marketingForm.value['customerVertical'];
+    marketingFieldRequest.reportingInfo.externalEventWebsite =
+      this.marketingForm.value['externalEventWebsite'];
+    marketingFieldRequest.marketingInfo.priorityExecutive =
+      this.marketingForm.value['inviteExecutives'] === 'yes';
+    marketingFieldRequest.financialsInfo.amountEstimated =
+      this.amountEstimated;
+    marketingFieldRequest.marketingInfo.estimateNumberOfAttendees =
+      this.marketingForm.value['attendees'];
+  }
+
   submitMarketingForm() {
-    console.log('submitted');
+
+    this.toggleChecker = true;
+    this.validate();
+    if (this.marketingForm.valid) {
+      this.updateForm();
+    }
   }
 
   selectedPriority(value: string) {
