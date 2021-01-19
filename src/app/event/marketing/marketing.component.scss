@@ -1,0 +1,279 @@
+$font-family: 'Google Sans', Arial, sans-serif;
+
+$text: 16px;
+$small-text1: 14px;
+$small-text2: 12px;
+
+$header1: 32px;
+$header2: 24px;
+
+$grey900: #202124;
+$grey800: #3c4043;
+$grey700: #5f6368;
+
+.marketing-header,
+.form-flex,
+.label-header-row {
+  display: flex;
+}
+
+.header-form {
+  margin-bottom: 1em;
+  width: 85%;
+}
+
+.header {
+  margin-top: 11px;
+}
+
+.check-icon {
+  margin-top: 1.4em;
+}
+
+.marketing-header-row {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: space-between;
+}
+
+.marketing-form-section,
+.sidenav-section {
+  width: 50%;
+}
+
+.height {
+  height: 20px;
+  width: 85%;
+}
+
+.marketing-info {
+  margin-right: 2em;
+}
+
+.navigation-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  height: 65px;
+}
+
+.required-header {
+  margin-top: 19px;
+}
+
+.icon-status {
+  font-size: 18px;
+}
+
+mat-icon {
+  font-size: 20px;
+}
+
+.label-tooltip {
+  align-items: center;
+}
+
+.tooltip-icon {
+  color: #80868b;
+  font-size: $small-text1;
+  margin: 5px 0 0 5px;
+}
+
+mat-grid-tile {
+  background: lightblue;
+  justify-content: start;
+}
+
+mat-button-toggle-group,
+mat-radio-button {
+  margin-right: 10px;
+  margin-top: 0.5em;
+}
+
+mat-button-toggle {
+  border-radius: 4px;
+  border: 1px solid #cfd8dc;
+  color: $grey700;
+  font-family: $font-family;
+  font-size: $small-text1;
+  margin-right: 1em;
+}
+
+button {
+  float: right;
+  margin-left: 12px;
+}
+
+.mat-chip.mat-standard-chip {
+  background-color: #e8f0fe;
+  color: $grey800;
+}
+
+.form-field ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  align-items: center;
+  height: 55px;
+}
+
+.form-field ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  border-top-width: 11px;
+  padding: 0.75em 0 1em;
+}
+
+.form-field
+  ::ng-deep
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline
+  .mat-form-field-outline-start {
+  border-style: none;
+  border-radius: 8px;
+  min-width: 1px;
+}
+
+.form-field
+  ::ng-deep
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline-end {
+  border-left-style: solid;
+  border-radius: 8px;
+}
+
+.form-field ::ng-deep .mat-select-arrow {
+  margin: 10px 4px 0;
+}
+
+.form-field .mat-form-field {
+  width: 85%;
+}
+
+.form-field ::ng-deep .mat-select-value,
+.mat-input-element,
+mat-option,
+mat-radio-button {
+  font-family: $font-family;
+  font-size: $small-text1;
+  color: $grey900;
+}
+
+.mat-button-toggle-standalone,
+.mat-button-toggle-group {
+  box-shadow: none;
+}
+
+.mat-button-toggle-checked {
+  background-color: #e8f0fe;
+  color: #185abc;
+}
+
+.form-field ::ng-deep .mat-button-toggle-label-content {
+  padding: 0 16px 0 12px;
+}
+
+.event-format .mat-form-field {
+  width: 40%;
+}
+
+.width {
+  width: 40%;
+}
+
+mat-label {
+  font-size: $small-text2;
+  font-family: $font-family;
+  line-height: 24px;
+  color: $grey800;
+}
+
+.primary-buttons {
+  background-color: #4285f4;
+  color: #fff;
+  font-family: $font-family;
+}
+
+.cancel-button {
+  color: #4285f4;
+  font-family: $font-family;
+}
+
+label,
+span {
+  font-size: $small-text1;
+  font-family: $font-family;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1 {
+  color: $grey900;
+  font-family: $font-family;
+  font-size: $header1;
+  font-weight: 420;
+  line-height: 37px;
+  margin-top: 10px;
+}
+
+h2 {
+  color: $grey900;
+  font-family: $font-family;
+  font-size: $header2;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 19px;
+}
+
+.guideline-header {
+  color: $grey700;
+  font-weight: lighter;
+  margin-top: 16px;
+}
+
+.dollar-sign {
+  color: $grey700;
+}
+
+.container {
+  display: flex;
+}
+
+.error-msg {
+  color: #f44336;
+}
+
+.valid-input {
+  color: #81c93c;
+}
+
+.field-message {
+  font-size: $small-text2;
+  font-family: $font-family;
+  margin: 8px 0 0 10px;
+}
+
+.guideline-instruction {
+  margin: 2em 0;
+}
+
+h3,
+p {
+  margin: 0;
+  font-family: Google Sans;
+  font-size: $text;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  color: $grey700;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  margin: 0.25em 0;
+}
+
+.event-focus-button {
+  display: flex;
+}

@@ -23,19 +23,119 @@ export class MarketingComponent implements OnInit {
 
   urlRegexp =
     /^[A-Za-z][A-Za-z\d.+-]*:\/*(?:\w+(?::\w+)?@)?[^\s/]+(?::\d+)?(?:\/[\w#!:.?+=&%@\-/]*)?$/;
+
   decimalValue = /^[0-9]+(\.[0-9]{1,2})?$/;
 
-  eventFormat: EnumList[] = [];
-  fundingTeam: EnumList[] = [];
-  customerSegment: EnumList[] = [];
-  revenueOpportunity: EnumList[] = [];
-  targetAudience: EnumList[] = [];
-  marketingObjective: EnumList[] = [];
-  customerVertical: EnumList[] = [];
-  productFocus: EnumList[] = [];
-  estimatedAttendees: EnumList[] = [];
-  priorities: EnumList[] = [];
-  brandFocus: EnumList[] = [];
+  eventFormat: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  fundingTeam: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  customerSegment: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  revenueOpportunity: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  targetAudience: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  marketingObjective: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  customerVertical: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  productFocus: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  estimatedAttendees: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  priorities: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
+  brandFocus: EnumList[] = [
+    {
+      field: 'OPTION_1',
+      value: 'Option 1'
+    },
+    {
+      field: 'OPTION_2',
+      value: 'Option 2'
+    }
+  ];
 
   eventFormatEmpty = false;
   eventMainFundingEmpty = false;

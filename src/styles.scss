@@ -1,4 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// primary colors
+$google-blue: #4285f4;
+$google-red: #ea4335;
+$google-yellow: #fbbc04;
+$google-green: #34a853;
+// dark colors
+$google-dark-blue: #185abc;
+$google-dark-red: #b31412;
+$google-dark-yellow: #ea8600;
+$google-dark-green: #137333;
+// light colors
+$google-light-blue: #d2e3fc;
+$google-light-red: #eacece;
+$google-light-yellow: #f6f0e1;
+$google-light-green: #ceead6;
+// lightest colors
+$google-lightest-blue: #e8f0fe;
+$google-lightest-red: #ffe4e4;
+$google-lightest-yellow: #fff9ea;
+$google-lightest-green: #dff6e6;
+// neutral colors
+$grey900: #202124;
+$grey800: #3c4043;
+$grey700: #5f6368;
+$grey600: #80868b;
+$grey500: #9aa0a6;
+$grey400: #bdc1c6;
+$grey300: #dadce0;
+$grey200: #e8eaed;
+$grey100: #f1f3f4;
+$grey50: #f8f9fa;
+$white: #fff;
+// drop shadows
+$small-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+$medium-drop-shadow: 0px 8px 8px rgba(0, 0, 0, 0.08);
+$large-drop-shadow: 0px 16px 16px rgba(0, 0, 0, 0.08);
+// large header fonts
+$h1-40: 40px;
+$h2-32: 32px;
+$h3-24: 24px;
+$h4-20: 20px;
+$h5-16: 16px;
+// smaller header fonts
+$h1-32: 32px;
+$h2-24: 24px;
+$h3-16: 16px;
+$h4-14: 14px;
+$h5-12: 12px;
+// text sizes
+$regular-text-24: 24px;
+$small-text-20: 20px;
+$smaller-text-16: 16px;
+$regular-text-16: 16px;
+$small-text-14: 14px;
+$smaller-text-12: 12px;
+// font family
+$google-sans-regular: 'Google Sans', Arial, sans-serif;
