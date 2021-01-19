@@ -11,6 +11,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [MarketingComponent],
   imports: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
     MatRadioModule,
     MatIconModule,
     RouterModule,
+    MatSnackBarModule
   ]
 })
 export class EventModule { }

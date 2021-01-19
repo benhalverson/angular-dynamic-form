@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { EnumList } from '../../enum-list';
 
 @Component({
@@ -10,7 +10,7 @@ import { EnumList } from '../../enum-list';
 })
 export class MarketingComponent implements OnInit {
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder, private readonly snackbar: MatSnackBar,) { }
   toggleChecker = false;
   priority = '';
   code = '';
@@ -118,13 +118,21 @@ export class MarketingComponent implements OnInit {
   ];
   priorities: EnumList[] = [
     {
-      field: 'OPTION_1',
+      field: 'PRODUCT_FOCUS',
+      value: 'Option 2'
+    },
+    {
+      field: 'MARKETING_OBJECTIVE_FOCUS',
       value: 'Option 1'
     },
     {
-      field: 'OPTION_2',
-      value: 'Option 2'
-    }
+      field: 'BRAND_AND_ENGAGEMENT_FOCUS',
+      value: 'Brand and Engagement'
+    },
+    {
+      field: 'PRIORITY_OTHER',
+      value: 'other'
+    },
   ];
   brandFocus: EnumList[] = [
     {
@@ -134,6 +142,14 @@ export class MarketingComponent implements OnInit {
     {
       field: 'OPTION_2',
       value: 'Option 2'
+    },
+    {
+      field: 'OPTION_3',
+      value: 'Option 3'
+    },
+    {
+      field: 'OPTION_4',
+      value: 'Option 4'
     }
   ];
 
@@ -187,4 +203,10 @@ export class MarketingComponent implements OnInit {
     return 'button text';
   }
 
+  openSnackbar(message: string, action: string) {
+    this.snackbar.open(message, action, {
+      duration: 5000,
+      horizontalPosition: 'left',
+    });
+  }
 }
